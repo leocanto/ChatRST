@@ -10,31 +10,31 @@ export class CreateSettings1666620420339 implements MigrationInterface {
                     {
                         name: "id",
                         type: "uuid",
-                        isPrimary: true
+                        isPrimary: true,
                     },
                     {
                         name: "username",
-                        type: "varchar"
+                        type: "varchar",
                     },
                     {
                         name: "chat",
-                        type: "booleann",
-                        default: true
+                        type: "boolean",
+                        default: true,
                     },
                     {
-                        name: "updade_at",
+                        name: "updated_at",
                         type: "timestamp",
-                        default: "now()"
+                        default: "now()",
                     },
                     {
-                        name: "create_at",
+                        name: "created_at",
                         type: "timestamp",
-                        default: "now()"
-                    }
-                ]
+                        default: "now()",
+                    },
+                ],
 
             })
-        )
+        );
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
