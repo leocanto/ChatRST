@@ -6,7 +6,7 @@ class SettingsController {
 
     async create(request: Request, response: Response){
     const { chat, username} = request.body;
-    const settingsRepository = getCustomRepository(SettingsRepository)
+    const settingsRepository = getCustomRepository(SettingsRepository);
 
     const settings = settingsRepository.create({
         chat,
@@ -15,7 +15,7 @@ class SettingsController {
 
     await settingsRepository.save(settings);
 
-    return response.json(settings)
+    return response.json(settings);
     
     }
 
