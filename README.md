@@ -21,6 +21,7 @@
 * yarn add typescript -D
 * yarn add ts-node-dev -D
 * yarn tsc --init
+* npm i nome-da-dependencia@v1.1.1
 
 >Commands Apps Aux:
 * yarn add typeorm reflect-metadata sqlite3
