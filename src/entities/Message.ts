@@ -5,31 +5,30 @@ import { User } from "./User";
 
 @Entity("messages")
 class Message {
+  @PrimaryColumn()
+  id: string;
 
-    @PrimaryColumn()
-    id: string;
+  @Column()
+  admin_id: string;
 
-    @Column()
-    admin_id: string;
+  @Column()
+  text: string;
 
-    @JoinColumn({ name: "user_id"})
-    @ManyToOne(() => User)
-    user: User;
+  @JoinColumn({ name: "user_id" })
+  @ManyToOne(() => User)
+  user: User;
 
-    @Column()
-    user_id: string;
- 
-    @Column()
-    text: string;
+  @Column()
+  user_id: string;
 
-    @CreateDateColumn()
-    created_at: Date;
+  @CreateDateColumn()
+  created_at: Date;
 
-    constructor() {
-        if(this.id) {
-            this.id = uuid();
-        }
+  constructor() {
+    if (!this.id) {
+      this.id = uuid();
     }
+  }
 }
 
 export { Message };
