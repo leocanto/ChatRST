@@ -33,6 +33,8 @@
     * yarn add uuid
     * yarn add @types/uuid -D
 
-
-
-
+    >> WebSocket
+    * yarn add socket.io
+    * yarn add socket.io-client
+    * yarn add @types/socket.io -D
+    * yarn add ejs
